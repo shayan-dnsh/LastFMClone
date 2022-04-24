@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vju-Rt-fr3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JQ0-Gb-GNp">
+            <objects>
+                <navigationController id="Vju-Rt-fr3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="O7z-CZ-dKq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="E35-By-wr2" kind="relationship" relationship="rootViewController" id="hCO-Vv-yTW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IWg-YL-ssU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1772" y="-36"/>
+        </scene>
+        <!--User Tracks View Controller-->
+        <scene sceneID="0P9-er-j3B">
+            <objects>
+                <collectionViewController storyboardIdentifier="UserTracksViewController" id="E35-By-wr2" customClass="UserTracksViewController" customModule="AppsFactoryMusic" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="ssg-w7-kVw" customClass="RefreshableCollectionView" customModule="AppsFactoryMusic" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.1450980392" green="0.14901960780000001" blue="0.17254901959999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZA1-qW-ZFS">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <view key="backgroundView" contentMode="scaleToFill" id="tdB-e6-Jo5">
+                            <rect key="frame" x="0.0" y="-88" width="414" height="896"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="O2W-dP-UWT">
+                                    <rect key="frame" x="60" y="368.5" width="295.5" height="159"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="doc" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="oFB-A2-L5X">
+                                            <rect key="frame" x="98" y="0.0" width="100" height="100"/>
+                                            <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="3tq-lR-ITa"/>
+                                                <constraint firstAttribute="width" constant="100" id="Q39-rm-Jc6"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No tracks! Please search something" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-Wh-uf8">
+                                            <rect key="frame" x="0.0" y="116" width="295.5" height="43"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aw4-Wh-uf8" firstAttribute="leading" secondItem="O2W-dP-UWT" secondAttribute="leading" id="Vo2-xP-1Bi"/>
+                                        <constraint firstAttribute="trailing" secondItem="aw4-Wh-uf8" secondAttribute="trailing" id="fBy-Fv-JaW"/>
+                                    </constraints>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="O2W-dP-UWT" firstAttribute="leading" secondItem="tdB-e6-Jo5" secondAttribute="leading" constant="60" id="fw2-jX-usZ"/>
+                                <constraint firstAttribute="trailing" secondItem="O2W-dP-UWT" secondAttribute="trailing" constant="58.5" id="hDk-tR-GFl"/>
+                                <constraint firstItem="O2W-dP-UWT" firstAttribute="centerY" secondItem="tdB-e6-Jo5" secondAttribute="centerY" id="zIv-Vy-N5r"/>
+                            </constraints>
+                        </view>
+                        <cells/>
+                        <connections>
+                            <outlet property="dataSource" destination="E35-By-wr2" id="K1C-Jh-m9A"/>
+                            <outlet property="delegate" destination="E35-By-wr2" id="SpS-6n-Igc"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="i1I-lV-sth"/>
+                    <connections>
+                        <outlet property="emptyState" destination="tdB-e6-Jo5" id="wiA-Rb-yh8"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LgG-dq-seR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-949" y="-36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="doc" catalog="system" width="115" height="128"/>
+    </resources>
+</document>
